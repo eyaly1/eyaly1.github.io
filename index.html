@@ -1,0 +1,167 @@
+<!doctype html>
+<!--
+  INTENTIONALLY INACCESSIBLE — until you write them, this starter has no main heading, no main
+  area and no landmarks: they are your job.
+
+  Week 1 — the first real page of your personal site.
+
+  Open this file with LIVE SERVER, never by double-clicking it.
+  Right-click in the editor → "Open with Live Server".
+
+  Write your code wherever you see a marker comment (the capital-letter ones below)
+  and delete the marker. When no marker is left, you have finished the core tier.
+
+  Everything asked for below was typed once today, in a cycle. Your practice folder has
+  your own version of each piece — assemble them here, on your own content.
+
+  Do NOT write any CSS this week. The page is meant to look plain — the CSS week is where
+  it stops looking like a 1996 Word document. A page that is structured correctly is worth
+  more marks today than a page that is styled.
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    
+    <title>Eyal Yehudai – Home</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+  <body>
+    <a href="#main">Skip to content</a> 
+    
+    <header>
+      <h1>Eyal yehudai</h1>
+      <p>Industrial and management engineering — Third year student at Ruppin academic center</p>
+   
+    
+    </header>
+
+    <!-- ============================================================
+         2. NAV — your main navigation.                         (cycle 2)
+         A <nav> containing a <ul> of links: nav > ul > li > a. Each link points at
+         a section of this page (href="#about"), and the link text says where it goes.
+         Remember: not every link list is a nav — this one is.
+         ============================================================ -->
+   <nav aria-label="Main">
+      <ul>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="about.html">About me</a></li>
+        <li><a href="notes.html">Projects</a></li>
+      </ul>
+    </nav>
+
+    <main id="main" tabindex="-1">
+      <section id="about">
+        <h2 class="dm-sans">About me</h2>
+
+       
+         
+         <p>
+          I approach technical challenges with an analytical, structured mindset, focusing on clear 
+          operational workflows and core system mechanics. Whether it's process optimization or 
+          technical development, I like problems where solutions are measurable and checkable.
+        </p> 
+
+     
+      </section>
+
+      <section id="learning">
+        <h2>What I am learning:</h2>
+
+        <table>
+          <caption class="dm-sans">My courses and academic focus</caption>
+          <thead>
+            <tr>
+              <th scope="col">Domain / Course</th>
+              <th scope="col">Focus Area</th>
+              <th scope="col">Tools &amp; Methods</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Industrial Engineering</th>
+              <td>Operations Research &amp; Simulation</td>
+              <td> Mathematical Models &amp; excel</td>
+            </tr>
+            <tr>
+              <th scope="row">Software &amp; Development</th>
+              <td>Web Development &amp; Programming</td>
+              <td> HTML, Python,c#, oop java</td>
+            </tr>
+            <tr>
+              <th scope="row">Systems &amp; Operations</th>
+              <td>Operational Excellence, project manegment</td>
+              <td> excel,MS project, SQL</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <article>
+          <h3 class="dm-sans">Reading notes: what the browser actually does</h3>
+          <p>Written on <time datetime="2026-11-05">5 November 2026</time>.</p>
+          <p>
+            The browser asks for one text file, turns the name into an address first, encrypts the
+            connection, gets text back, parses it into a tree, and paints. Six words: request, DNS,
+            TLS, response, parse, paint.
+          </p>
+        </article>
+
+        <details>
+          <summary>What I read this week</summary>
+          <ul>
+            <li>MDN, the <code>label</code> element: why <code>for</code> points at an <code>id</code>.</li>
+            <li>MDN, the <code>table</code> element: <code>caption</code>, <code>thead</code>, <code>scope</code>.</li>
+            <li>WebAIM on skip links, and why the first Tab on a page matters.</li>
+          </ul>
+        </details>
+      </section>
+
+      <section id="contact">
+        <h2>Contact me</h2>
+        <p>
+          The quickest way is the form. Otherwise
+          <a href="mailto:eyalyehudai23@icloud.com">email me</a>, or read the documentation I keep open:
+          <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noopener noreferrer">the HTML reference on MDN</a>.
+        </p>
+
+        <form method="get">
+          <fieldset>
+            <legend>Who you are</legend>
+            <p><label for="visitor-name">Your name</label> <input type="text" id="visitor-name" name="visitor-name" required /></p>
+            <p>
+              <label for="visitor-email">Your email</label>
+              <input type="email" id="visitor-email" name="visitor-email" placeholder="you@example.com" required aria-describedby="visitor-email-hint" />
+            </p>
+            <p id="visitor-email-hint">I reply usually within two days.</p>
+            <p><label for="visitor-phone">Phone (optional)</label> <input type="tel" id="visitor-phone" name="visitor-phone" /></p>
+          </fieldset>
+
+          <fieldset>
+            <legend>Reply by</legend>
+            <p><input type="radio" id="reply-email" name="reply-by" value="email" checked /> <label for="reply-email">Email</label></p>
+            <p><input type="radio" id="reply-phone" name="reply-by" value="phone" /> <label for="reply-phone">Phone</label></p>
+          </fieldset>
+
+          <p>
+            <label for="topic">What is it about?</label>
+            <select id="topic" name="topic">
+              <option value="course">This course</option>
+              <option value="project">A project idea</option>
+              <option value="other">Something else</option>
+            </select>
+          </p>
+          <p><label for="visitor-message">Your message</label> <textarea id="visitor-message" name="visitor-message" rows="4"></textarea></p>
+          <button type="submit">Send</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        Built from an empty file in Frontend Development, Ruppin Academic Center. Source on <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>.
+      </p>
+    </footer>
+  </body>
+</html>
